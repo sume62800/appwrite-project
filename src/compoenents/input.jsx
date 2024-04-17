@@ -1,4 +1,4 @@
-import React, {userId} from 'react'
+import React, {useId} from 'react'
 
 const input=React.forwardRef(function input(
     {
@@ -8,7 +8,7 @@ const input=React.forwardRef(function input(
         ...props
     }
 ) {
-    const id=userId()
+    const id=useId()
     return (
       <div>
         {label && <label className={`${className}`}  htmlFor={id}>{label}</label>}
